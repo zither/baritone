@@ -152,6 +152,10 @@ public final class ElytraBehavior implements Helper {
             this.clear();
         }
 
+        public int getPlayerNear() {
+            return this.playerNear;
+        }
+
         public void tick() {
             // Recalculate closest path node
             this.updatePlayerNear();

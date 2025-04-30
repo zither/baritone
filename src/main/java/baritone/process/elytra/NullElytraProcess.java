@@ -100,4 +100,9 @@ public final class NullElytraProcess extends BaritoneProcessHelper implements IE
     public BetterBlockPos playerNearPos() {
         return null;
     }
+
+    @Override
+    public int playerNear() {
+        return 0;
+    }
 }

@@ -135,7 +135,9 @@ public class ElytraProcess extends BaritoneProcessHelper implements IBaritonePro
                 logDirect("Emergency landing - almost out of elytra durability or fireworks");
                 safetyLanding = true;
             } else {
-                logDirect("almost out of elytra durability or fireworks, but I'm going to continue since elytraAllowEmergencyLand is false");
+                if (Baritone.settings().elytraFireworkSpeed.value > 0) {
+                    logDirect("almost out of elytra durability or fireworks, but I'm going to continue since elytraAllowEmergencyLand is false");
+                }
             }
         }
         if (ctx.player().isFallFlying() && this.state != State.LANDING && (this.behavior.pathManager.isComplete() || safetyLanding)) {
@@ -581,5 +583,10 @@ public class ElytraProcess extends BaritoneProcessHelper implements IBaritonePro
         } 
         int index = this.behavior.pathManager.getPlayerNear();
         return path.get(index);
+    }
+
+    @Override
+    public int playerNear() {
+        return this.behavior.pathManager.getPlayerNear();
     }
 }

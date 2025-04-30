@@ -35,6 +35,8 @@ public interface IElytraProcess extends IBaritoneProcess {
 
     BetterBlockPos playerNearPos();
 
+    int playerNear();
+
     void pathTo(BlockPos destination);
 
     void pathTo(Goal destination);

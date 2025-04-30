@@ -41,6 +41,7 @@ import baritone.pathing.movement.movements.MovementFall;
 import baritone.process.elytra.ElytraBehavior;
 import baritone.process.elytra.NetherPathfinderContext;
 import baritone.process.elytra.NullElytraProcess;
+import baritone.process.elytra.NetherPath;
 import baritone.utils.BaritoneProcessHelper;
 import baritone.utils.PathingCommandContext;
 import it.unimi.dsi.fastutil.longs.LongOpenHashSet;
@@ -565,5 +566,9 @@ public class ElytraProcess extends BaritoneProcessHelper implements IBaritonePro
             }
         }
         return null;
+    }
+
+    public NetherPath currentPath() {
+        return this.behavior != null ? this.behavior.pathManager.getPath() : null;
     }
 }

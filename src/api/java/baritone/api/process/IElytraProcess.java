@@ -18,6 +18,7 @@
 package baritone.api.process;
 
 import baritone.api.pathing.goals.Goal;
+import baritone.api.utils.BetterBlockPos;
 import net.minecraft.core.BlockPos;
 
 public interface IElytraProcess extends IBaritoneProcess {
@@ -28,6 +29,8 @@ public interface IElytraProcess extends IBaritoneProcess {
      * @return Where it is currently flying to, null if not active
      */
     BlockPos currentDestination();
+
+    List<BetterBlockPos> currentPath();
 
     void pathTo(BlockPos destination);
 

@@ -62,4 +62,8 @@ public final class NetherPath extends AbstractList<BetterBlockPos> {
     public static NetherPath emptyPath() {
         return EMPTY_PATH;
     }
+
+    public List<BetterBlockPos> path() {
+        return this.backing;
+    }
 }

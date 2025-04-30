@@ -568,11 +568,7 @@ public class ElytraProcess extends BaritoneProcessHelper implements IBaritonePro
         return null;
     }
 
-    public NetherPath currentPath() {
-        return this.behavior != null ? this.behavior.pathManager.getPath() : null;
-    }
-
-    public ElytraBehavior behavior(){
-        return this.behavior;
+    public LIst<BetterBlockPos> currentPath() {
+        return this.behavior != null ? this.behavior.pathManager.getPath().path() : null;
     }
 }

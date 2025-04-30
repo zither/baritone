@@ -20,6 +20,7 @@ package baritone.api.process;
 import baritone.api.pathing.goals.Goal;
 import baritone.api.utils.BetterBlockPos;
 import net.minecraft.core.BlockPos;
+import java.util.List;
 
 public interface IElytraProcess extends IBaritoneProcess {
 

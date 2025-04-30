@@ -568,6 +568,7 @@ public class ElytraProcess extends BaritoneProcessHelper implements IBaritonePro
         return null;
     }
 
+    @Override
     public LIst<BetterBlockPos> currentPath() {
         return this.behavior != null ? this.behavior.pathManager.getPath().path() : null;
     }
